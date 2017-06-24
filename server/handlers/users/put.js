@@ -4,7 +4,7 @@ exports = module.exports = (
 ) => async( {
     response
 }, next ) => {
-    response.body = await db.users.find( { } )
+    response.body = await db.users.insert( { name: 'gabi' } )
 
     await next( )
 }
