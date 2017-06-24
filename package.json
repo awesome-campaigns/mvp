@@ -16,8 +16,5 @@
     "url": "https://github.com/awesome-campaigns/mvp/issues"
   },
   "homepage": "https://github.com/awesome-campaigns/mvp#readme",
-  "dependencies": {
-    "koa": "^2.2.0",
-    "koa-static": "^3.0.0"
-  }
+  "dependencies": {}
 }
