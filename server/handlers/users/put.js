@@ -13,10 +13,12 @@ exports = module.exports = (
         ctx.throw( 'username already exists', 409 )
     }
 
-    ctx.body = await db.users.insert( {
+    const { _id, name: username } = await db.users.insert( {
         name,
         password: auth.hash( password )
     } )
+
+    ctx.body = { _id, username }
 
     await next( )
 }

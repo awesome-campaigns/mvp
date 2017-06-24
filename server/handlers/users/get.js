@@ -2,7 +2,8 @@
 exports = module.exports = (
     db = 'service/database'
 ) => async( ctx, next ) => {
-    ctx.body = await db.users.find( { } )
+    const users = await db.users.find( { } )
+    ctx.body = users.map( ( { _id, name } ) => ( { _id, name } ) )
 
     await next( )
 }
